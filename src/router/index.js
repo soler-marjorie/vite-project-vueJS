@@ -57,8 +57,8 @@ const router = createRouter({
         },
         {
             path: "/exercices/exo3",
-            name: "exo2",
-            component: () => import("../views/exo/MethodExecutionComp.vue")
+            name: "exo3",
+            component: () => import("../views/exo/ExoEventBinding.vue")
         },
 
 
@@ -72,6 +72,11 @@ const router = createRouter({
             path: "/TP/TP1",
             name: "TP1",
             component: () => import("../views/TP/DataBinding.vue")
+        },
+        {
+            path: "/TP/TP2",
+            name: "TP2",
+            component: () => import("../views/TP/EventBinding.vue")
         },
 
 

@@ -8,6 +8,7 @@
                 exercises: [
                     { name: "Exercice 1", path: "/exercices/exo1" },
                     { name: "Exercice 2", path: "/exercices/exo2" },
+                    { name: "Exercice 2", path: "/exercices/exo3" },
                 ],
 
                 lessons: [
@@ -18,6 +19,7 @@
 
                 TP: [
                     { name: "TP 1", path: "/TP/TP1" },
+                    { name: "TP 2", path: "/TP/TP2" },
                 ],
             };
         },
@@ -31,7 +33,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">

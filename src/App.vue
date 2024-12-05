@@ -7,7 +7,6 @@
 <template>
   <NavBar></NavBar>
     <router-view class="min-vh-100"></router-view>
-    <h1>On est dans App.vue</h1>
   <Footer></Footer>
 </template>
 
