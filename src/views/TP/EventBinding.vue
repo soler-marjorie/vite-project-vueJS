@@ -1,4 +1,5 @@
 <template>
+    <h5>TP : Event binding</h5>
     <div class="container mt-5">
       <input v-on:input="capterInput($event)" type="text">
       <p>{{premierInput}}</p>

@@ -38,7 +38,11 @@ const router = createRouter({
             name: "Lesson4",
             component: () => import("../views/lessons/VModel.vue")
         },
-
+        {
+            path: "/lessons/lesson5",
+            name: "Lesson5",
+            component: () => import("../views/lessons/Watcher.vue")
+        },
 
 
 
@@ -64,6 +68,16 @@ const router = createRouter({
             path: "/exercices/exo3",
             name: "exo3",
             component: () => import("../views/exo/ExoEventBinding.vue")
+        },
+        {
+            path: "/exercices/exo4",
+            name: "exo4",
+            component: () => import("../views/exo/ExoBugFonctionEvent.vue")
+        },
+        {
+            path: "/exercices/exo5",
+            name: "exo5",
+            component: () => import("../views/exo/ExoSolutionBug.vue")
         },
 
 

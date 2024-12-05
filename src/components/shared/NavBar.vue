@@ -6,21 +6,24 @@
         data() {
             return {
                 exercises: [
-                    { name: "Exercice 1", path: "/exercices/exo1" },
-                    { name: "Exercice 2", path: "/exercices/exo2" },
-                    { name: "Exercice 2", path: "/exercices/exo3" },
+                    { name: "Exercice 1 : Text Interpolation Mode : Composition", path: "/exercices/exo1" },
+                    { name: "Exercice 2 : Méthods : Mode Composition", path: "/exercices/exo2" },
+                    { name: "Exercice 3 : Event Binding Mode : Composition", path: "/exercices/exo3" },
+                    { name: "Exercice 4 : Computed Bug Mode : Composition", path: "/exercices/exo4" },
+                    { name: "Exercice 5 : Computed Mode : Composition", path: "/exercices/exo5" },
                 ],
 
                 lessons: [
-                    { name: "Lesson 1", path: "/Lessons/lesson1" },
-                    { name: "Lesson 2", path: "/Lessons/lesson2" },
-                    { name: "Lesson 3", path: "/Lessons/lesson3" },
-                    { name: "Lesson 4", path: "/Lessons/lesson4" },
+                    { name: "Lesson 1 : L'interpolation de texte dans Vue.js", path: "/Lessons/lesson1" },
+                    { name: "Lesson 2 : Inline Templating Mode : Composition", path: "/Lessons/lesson2" },
+                    { name: "Lesson 3 : Attribute Binding Mode : Composition", path: "/Lessons/lesson3" },
+                    { name: "Lesson 4 : Two Way Binding Event Binding Mode : Composition", path: "/Lessons/lesson4" },
+                    { name: "Lesson 5 : Watcher", path: "/Lessons/lesson5" },
                 ],
 
                 TP: [
-                    { name: "TP 1", path: "/TP/TP1" },
-                    { name: "TP 2", path: "/TP/TP2" },
+                    { name: "TP 1 : Tp-Databinding : Mode Composition", path: "/TP/TP1" },
+                    { name: "TP 2 : Event Binding", path: "/TP/TP2" },
                 ],
             };
         },
