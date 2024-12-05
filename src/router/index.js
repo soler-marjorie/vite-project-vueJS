@@ -112,6 +112,11 @@ const router = createRouter({
             name: "TP3",
             component: () => import("../views/TP/Reactivite.vue")
         },
+        {
+            path: "/TP/TP4",
+            name: "TP4",
+            component: () => import("../views/TP/TPDynamicStyleCss.vue")
+        },
 
 
 
