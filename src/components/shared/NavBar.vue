@@ -24,6 +24,7 @@
                 TP: [
                     { name: "TP 1 : Tp-Databinding : Mode Composition", path: "/TP/TP1" },
                     { name: "TP 2 : Event Binding", path: "/TP/TP2" },
+                    { name: "TP 3 : Reactivite", path: "/TP/TP3" },
                 ],
             };
         },

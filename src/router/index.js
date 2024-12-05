@@ -97,6 +97,11 @@ const router = createRouter({
             name: "TP2",
             component: () => import("../views/TP/EventBinding.vue")
         },
+        {
+            path: "/TP/TP3",
+            name: "TP3",
+            component: () => import("../views/TP/Reactivite.vue")
+        },
 
 
 
