@@ -1,31 +1,33 @@
 <template>
-    <h5>TP 2 : Event Binding</h5>
-    <div>
+    <div class="container mt-5">
       <input v-on:input="capterInput($event)" type="text">
-      <h3 class="mx-3">{{uneString}}</h3>
+      <p>{{premierInput}}</p>
+      <input v-on:keyup.esc.input="capterInputEsc($event)" type="text">
+      <p>{{uneString}}</p>
+      <button  v-on:click="createAlert" type="button" class="btn btn-success">Alerte</button>
     </div>
+</template>
+    
+<script setup lang='js'>
+import { ref } from 'vue'
 
-    <div>
-      <input v-on:input="capterInput($event)" type="text">
-      <h3 class="mx-3">{{uneString}}</h3>
-    </div>
+const uneString = ref('Hello');
+const premierInput = ref('Hiiiiii');
 
-    <button v-on:click="createAlert" ype="button" class="btn btn-success">Alert</button>
-  </template>
-  
-  <script setup lang='js'>
-  import { ref } from 'vue'
-  
-  const uneString = ref('Hello');
-
-  function capterInput(event) {
+function capterInputEsc(event){
+    console.log(event)
+    uneString.value= event.target.value
+}
+function capterInput(event) {
     console.log(event);
 
-    uneString.value = event.target.value;
-  }
+    premierInput.value = event.target.value;
+}
 
-  function createAlert(){
-    alert('OKKKKKKKKKK !')
-  }
+function createAlert(){
+    alert('OKKKKKK!')
+}
+</script>
 
-  </script>
+<style scoped lang="css">
+</style>

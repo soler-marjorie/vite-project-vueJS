@@ -33,6 +33,11 @@ const router = createRouter({
             name: "Lesson3",
             component: () => import("../views/lessons/AttributBinding.vue")
         },
+        {
+            path: "/lessons/lesson4",
+            name: "Lesson4",
+            component: () => import("../views/lessons/VModel.vue")
+        },
 
 
 

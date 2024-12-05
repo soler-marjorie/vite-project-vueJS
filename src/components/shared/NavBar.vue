@@ -15,6 +15,7 @@
                     { name: "Lesson 1", path: "/Lessons/lesson1" },
                     { name: "Lesson 2", path: "/Lessons/lesson2" },
                     { name: "Lesson 3", path: "/Lessons/lesson3" },
+                    { name: "Lesson 4", path: "/Lessons/lesson4" },
                 ],
 
                 TP: [
