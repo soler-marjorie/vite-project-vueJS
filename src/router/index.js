@@ -79,6 +79,11 @@ const router = createRouter({
             name: "exo5",
             component: () => import("../views/exo/ExoSolutionBug.vue")
         },
+        {
+            path: "/exercices/exo6",
+            name: "exo6",
+            component: () => import("../views/exo/ExoDynamicStyling.vue")
+        },
 
 
         {
