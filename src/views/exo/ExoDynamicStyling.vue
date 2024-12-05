@@ -1,12 +1,11 @@
 <template>
     <h5>Exercice 6 : Dynamic styling</h5>
-
     <div 
         @click="isBlueClicked = !isBlueClicked" 
         :style="clickStyleBlue"
         class="card1"
     >
-        Click me!
+        Click me blue!
     </div>
 
     <div 
@@ -14,8 +13,9 @@
         :style="clickStylePink"
         class="card1"
     >
-        Click me!
+        Click me pink!
     </div>
+
 </template>
     
 <script setup lang='js'>

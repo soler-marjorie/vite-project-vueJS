@@ -11,7 +11,8 @@
                     { name: "Exercice 3 : Event Binding Mode : Composition", path: "/exercices/exo3" },
                     { name: "Exercice 4 : Computed Bug Mode : Composition", path: "/exercices/exo4" },
                     { name: "Exercice 5 : Computed Mode : Composition", path: "/exercices/exo5" },
-                    { name: "Exercice 6 : Dynamic styling", path: "/exercices/exo6" }
+                    { name: "Exercice 6 : Dynamic styling", path: "/exercices/exo6" },
+                    { name: "Exercice 7 : Dynamic styling Class CSS", path: "/exercices/exo7" }
                 ],
 
                 lessons: [
