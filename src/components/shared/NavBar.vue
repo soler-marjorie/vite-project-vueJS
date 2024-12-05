@@ -13,6 +13,11 @@
                 lessons: [
                     { name: "Lesson 1", path: "/Lessons/lesson1" },
                     { name: "Lesson 2", path: "/Lessons/lesson2" },
+                    { name: "Lesson 3", path: "/Lessons/lesson3" },
+                ],
+
+                TP: [
+                    { name: "TP 1", path: "/TP/TP1" },
                 ],
             };
         },
@@ -26,6 +31,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -74,9 +80,25 @@
                         </ul>
                     </li>
 
-
-                    <li class="nav-item">
-                        <router-link class="nav-link active" aria-current="page" to="/TP">TP</router-link>
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="navbarDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            TP
+                        </a>
+                        
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li v-for="(TP, index) in TP" :key="index">
+                                <router-link class="dropdown-item" :to="TP.path">
+                                    {{ TP.name }}
+                                </router-link>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>

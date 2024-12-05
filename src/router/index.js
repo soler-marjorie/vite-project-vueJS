@@ -20,13 +20,18 @@ const router = createRouter({
         },
         {
             path: "/lessons/lesson1",
-            name: "Lessons",
+            name: "Lesson1",
             component: () => import("../views/lessons/LessonTextInterpolation.vue")
         },
         {
             path: "/lessons/lesson2",
-            name: "Lessons",
+            name: "Lesson2",
             component: () => import("../views/lessons/LessonInlineTemplating.vue")
+        },
+        {
+            path: "/lessons/lesson3",
+            name: "Lesson3",
+            component: () => import("../views/lessons/AttributBinding.vue")
         },
 
 
@@ -55,6 +60,22 @@ const router = createRouter({
             name: "exo2",
             component: () => import("../views/exo/MethodExecutionComp.vue")
         },
+
+
+        {
+            path: "/",
+            alias: "/TP",
+            name: "TP",
+            component: () => import("../views/TP/MainHomeTp.vue"),
+        },
+        {
+            path: "/TP/TP1",
+            name: "TP1",
+            component: () => import("../views/TP/DataBinding.vue")
+        },
+
+
+
         {
             path: '/:pathMatch(.*)*',
             name: 'NotFound',
