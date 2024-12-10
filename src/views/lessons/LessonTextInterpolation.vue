@@ -1,12 +1,14 @@
 <template>
   <div class="container py-5">
-    <header class="text-center mb-5">
+    <div class="text-center mb-5">
       <h1 class="display-4 fw-bold">L'interpolation de texte dans Vue.js</h1>
       <p class="lead">
         L'interpolation permet d'insérer dynamiquement des valeurs JavaScript dans le DOM via des expressions dans le
         HTML.
       </p>
-    </header>
+      <p>{{ variableClassic }}</p>
+      <p>{{ tableauAdmin }}</p>
+    </div>
 
     <section id="examples" class="mb-5">
       <h2 class="fw-bold mb-3">Exemples pratiques</h2>
@@ -31,24 +33,26 @@
       </div>
     </section>
 
-    <footer class="text-center mt-5">
+    <div class="text-center mt-5">
       <p>
         Pour plus d'informations, consultez la
         <a href="https://vuejs.org/guide/essentials/template-syntax.html" class="link-primary">documentation officielle
           sur la syntaxe des templates</a>.
       </p>
-    </footer>
+    </div>
   </div>
 </template>
 
 <script setup lang="js">
 import { ref } from 'vue';
 
+let variableClassic = 'STEVEN VANDAMME'
 // Propriétés réactives
 const message = ref('Bonjour, Vue.js !');
 const firstName = ref('JigZo');
 const lastName = ref('Dupont');
 const count = ref(0);
+const tableauAdmin = ref([111,'stringg'])
 
 // Fonctions
 function toUpperCase(str) {

@@ -12,15 +12,28 @@
                     { name: "Exercice 4 : Computed Bug Mode : Composition", path: "/exercices/exo4" },
                     { name: "Exercice 5 : Computed Mode : Composition", path: "/exercices/exo5" },
                     { name: "Exercice 6 : Dynamic styling", path: "/exercices/exo6" },
-                    { name: "Exercice 7 : Dynamic styling Class CSS", path: "/exercices/exo7" }
+                    { name: "Exercice 7 : Dynamic styling Class CSS", path: "/exercices/exo7" },
+                    { name: "Exercice 8 : List rendering", path: "/exercices/exo8" },
+                    { name: "Exercice 9 : Props", path: "/exercices/exo9" },
+                    { name: "Exercice 9.1 : Props Parent", path: "/exercices/exo9.1" },
+                    { name: "Exercice 9.2 : Props Enfant", path: "/exercices/exo9.2" },
+                    { name: "Exercice 10 : Props Bug", path: "/exercices/exo10" },
+                    { name: "Exercice 11 : V-for V-bind", path: "/exercices/exo11" },
+                    { name: "Exercice 12 : V-for V-bind Enfant", path: "/exercices/exo12" },
+                    { name: "Exercice 13 : Fetch API", path: "/exercices/exo13" }
                 ],
 
                 lessons: [
                     { name: "Lesson 1 : L'interpolation de texte dans Vue.js", path: "/Lessons/lesson1" },
                     { name: "Lesson 2 : Inline Templating Mode : Composition", path: "/Lessons/lesson2" },
-                    { name: "Lesson 3 : Attribute Binding Mode : Composition", path: "/Lessons/lesson3" },
+                    { name: "Lesson 3 : Event Binding Mode : Composition", path: "/Lessons/lesson3" },
                     { name: "Lesson 4 : Two Way Binding Event Binding Mode : Composition", path: "/Lessons/lesson4" },
                     { name: "Lesson 5 : Watcher", path: "/Lessons/lesson5" },
+                    { name: "Lesson 6 : Attribute bending view", path: "/Lessons/lesson6" },
+                    { name: "Lesson 7 : Computed propities", path: "/Lessons/lesson7" },
+                    { name: "Lesson 8 : Dynamic style", path: "/Lessons/lesson8" },
+                    { name: "Lesson 9 : Methods", path: "/Lessons/lesson9" },
+                    { name: "Lesson 10 : List rendering", path: "/Lessons/lesson10" },
                 ],
 
                 TP: [
@@ -28,6 +41,7 @@
                     { name: "TP 2 : Event Binding", path: "/TP/TP2" },
                     { name: "TP 3 : Reactivite", path: "/TP/TP3" },
                     { name: "TP 4 : Dynamic style", path: "/TP/TP4" },
+                    { name: "TP 5 : List rendering V-for V-if", path: "/TP/TP5" },
                 ],
             };
         },
