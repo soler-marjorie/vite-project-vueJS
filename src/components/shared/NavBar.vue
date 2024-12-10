@@ -20,7 +20,9 @@
                     { name: "Exercice 10 : Props Bug", path: "/exercices/exo10" },
                     { name: "Exercice 11 : V-for V-bind", path: "/exercices/exo11" },
                     { name: "Exercice 12 : V-for V-bind Enfant", path: "/exercices/exo12" },
-                    { name: "Exercice 13 : Fetch API", path: "/exercices/exo13" }
+                    { name: "Exercice 13 : Fetch API", path: "/exercices/exo13" },
+                    { name: "Exercice 14 : Routes détails", path: "/lesson-router" },
+                    { name: "Exercice 14.1 : Routes détails id", path: "/details/:id" }
                 ],
 
                 lessons: [
@@ -51,10 +53,6 @@
 <template>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">

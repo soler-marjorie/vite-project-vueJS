@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 const router = createRouter({
     history: createWebHistory(),
     routes: [
+
         {
             path: "/",
             alias: "/home",
@@ -151,9 +152,31 @@ const router = createRouter({
         },
         {
             path: "/exercices/exo13",
-            name: "exo12",
+            name: "exo13",
             component: () => import("../views/exo/ExoFetchApi.vue")
         },
+
+        {
+            path: "/lesson-router",
+            name: "exo14",
+            component: () => import("../views/exo/routes/LessonRouterView.vue")
+        },
+
+
+        //router nav exemple
+        {
+            path: "/details/:id",
+            name: "exo14.1",
+            component: () => import("../views/exo/routes/DetailsPage.vue"),
+            props:true
+        },
+        //avec 2 params
+        // {
+        //     path: "/details/:id/:itemName", //Exemple de route avec 2 paramètres  
+        //     name: "Details",
+        //     component: () => import("../views/../components/shared/DetailsPage.vue"),
+        //     props:true
+        // },
 
 
         {
