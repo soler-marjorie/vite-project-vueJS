@@ -15,14 +15,20 @@
                     { name: "Exercice 7 : Dynamic styling Class CSS", path: "/exercices/exo7" },
                     { name: "Exercice 8 : List rendering", path: "/exercices/exo8" },
                     { name: "Exercice 9 : Props", path: "/exercices/exo9" },
-                    { name: "Exercice 9.1 : Props Parent", path: "/exercices/exo9.1" },
-                    { name: "Exercice 9.2 : Props Enfant", path: "/exercices/exo9.2" },
-                    { name: "Exercice 10 : Props Bug", path: "/exercices/exo10" },
-                    { name: "Exercice 11 : V-for V-bind", path: "/exercices/exo11" },
-                    { name: "Exercice 12 : V-for V-bind Enfant", path: "/exercices/exo12" },
-                    { name: "Exercice 13 : Fetch API", path: "/exercices/exo13" },
-                    { name: "Exercice 14 : Routes détails", path: "/lesson-router" },
-                    { name: "Exercice 14.1 : Routes détails id", path: "/details/:id" }
+                    { name: "Exercice 10 : Props Parent", path: "/exercices/exo10" },
+                    { name: "Exercice 11 : Props Enfant", path: "/exercices/exo11" },
+                    { name: "Exercice 12 : Props Bug", path: "/exercices/exo12" },
+                    { name: "Exercice 13 : V-for V-bind", path: "/exercices/exo13" },
+                    { name: "Exercice 14 : V-for V-bind Enfant", path: "/exercices/exo14" },
+                    { name: "Exercice 15 : Fetch API", path: "/exercices/exo15" },
+
+                    { name: "Exercice Router: Routes détails", path: "/lesson-router" },
+                    { name: "Exercice Router details : Routes détails id", path: "/details/:id" },
+
+                    
+
+
+                    
                 ],
 
                 lessons: [

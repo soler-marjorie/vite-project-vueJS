@@ -1,41 +1,79 @@
 <template>
-    <div >
-      <h1 class="text-center">Ici c'est le composant parent ExoPropsView</h1>
-      <PropsOneFriendComp unAmiName="Dr.Azerty" unAmiPhone="098765234" unAmiMail="a@a.aa"></PropsOneFriendComp>
-      <PropsOneFriendComp unAmiName="Cortex22" unAmiPhone="30303003" unAmiMail="cortex@cortex.cortex"></PropsOneFriendComp>
-      <PropsOneFriendComp unAmiName="Dr.Qwerty" unAmiPhone="098765234" unAmiMail="b@b.bb"></PropsOneFriendComp>
-      <PropsOneFriendComp unAmiName="Dr.aaaaa" unAmiPhone="5555555" unAmiMail="lol@lol.com"></PropsOneFriendComp>
-    </div>
+  <EmitNewOneFriendIdComp @add-ami="ajouterAmi"></EmitNewOneFriendIdComp>
 
-    <PropsOneFriendBugComp unAmiName="Dr.BUUUUUUG" unAmiPhone="0000" unAmiMail="lol@lol.com" premium="abc"></PropsOneFriendBugComp>
 
-    //Mode Objet
-    <PropsOneFriendOptiComp unAmiPhone="0987654" unAmiMail="eric@reptile.com" premium="10000"></PropsOneFriendOptiComp>
-  </template>
+  <EmitOneFriendIdComp
+      v-for="unAmi in lesAmis" 
+      :key="unAmi.id" 
+      :id="unAmi.id"
+      :unAmiName="unAmi.name" 
+      :unAmiPhone="unAmi.phone"
+      :unAmiMail="unAmi.email"
+      :premium="unAmi.premium"
+      @mon-event-premium="reactionStatus"
+      @delete-ami="deleteAmi"
+  ></EmitOneFriendIdComp>
+
   
-  
-  <script setup lang='js'>
-  import { defineAsyncComponent } from 'vue'
-  const PropsOneFriendComp = defineAsyncComponent(() => import('../../views/exo/ExoPropsEnfant.vue'))
+</template>
 
-  // Mode Objet
-  import { defineAsyncComponent } from 'vue'
-  const PropsOneFriendOptiComp = defineAsyncComponent(() => import('../../components/PropsOneFriendOptiComp.vue'))
+<script setup lang='js'>
+import { ref } from 'vue';
 
-  const lesAmis = ref([
-    {
-        id: 'lasticot',
-        name: 'COCO L ASTICOT',
-        phone: '01234 5678 991',
-        email: 'coco@lasticot.com',
-        premium: true
-    },
-    {
-        id: 'kimonoSurUnFrigo',
-        name: "Steven Seagal",
-        phone: '+338765477',
-        email: 'steven@seagal.com',
-        premium: true
-    }
+import EmitOneFriendIdComp from '../exo/ExoPropsEnfant.vue';
+const lesAmis = ref([
+  {
+      id: 'lasticot',
+      name: 'COCO L ASTICOT',
+      phone: '01234 5678 991',
+      email: 'coco@lasticot.com',
+      premium: true
+  },
+  {
+      id: 'lasticot2',
+      name: 'COCO L ASTICOT',
+      phone: '01234 5678 991',
+      email: 'coco@lasticot.com',
+      premium: true
+  },
+  {
+      id: 'kimonoSurUnFrigo',
+      name: "Steven Seagal",
+      phone: '+338765477',
+      email: 'steven@seagal.com',
+      premium: true
+  }
 ]);
-  </script>
+
+function reactionStatus(leIdDansUnAmi) {
+  // alert(`Top délire : J'arrive à réagir dans le parent 
+  // à l'event "mon-eventpremium" qui est déclenché par le composant ENFANT `);
+  const unAmiIdentified = lesAmis.value.find(unAmiATrouver => unAmiATrouver.id === leIdDansUnAmi);
+  console.log('amiIdentified : ', unAmiIdentified);
+  unAmiIdentified.premium = !unAmiIdentified.premium;
+  console.log('amiIdentified : ', unAmiIdentified);
+}
+
+
+
+import EmitNewOneFriendIdComp from '../exo/Newfriend.vue' ;
+
+function ajouterAmi(eventName, eventPhone, eventMail) {
+    const newAmiContact = {
+        id: new Date().toISOString(),
+        name: eventName,
+        phone: eventPhone,
+        email: eventMail,
+        premium: false,
+    };
+    lesAmis.value.push(newAmiContact);
+    console.log(lesAmis.value);
+}
+
+
+function deleteAmi(id){
+  const index = lesAmis.value.findIndex((ami) => ami.id === id);
+  lesAmis.value.splice(index, 1);
+}
+
+</script>

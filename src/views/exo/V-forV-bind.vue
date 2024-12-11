@@ -12,7 +12,8 @@
 
 <script setup lang='js'>
 import { ref } from 'vue';
-import EmitOneFriendIdComp from '../views/exo/V-forV-bind.vue';
+import EmitOneFriendIdComp from '../views/exo/V-forV-bindEnfant.vue';
+
 const lesAmis = ref([
     {
         id: 'lasticot',

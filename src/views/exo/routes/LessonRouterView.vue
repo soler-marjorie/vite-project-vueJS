@@ -10,14 +10,7 @@
         <p>{{ item.name }}</p>
         <router-link class="btn btn-primary" aria-current="page" :to="{ name: 'exo14.1', params: { id: item.id }}"> Voir les détails</router-link>
         
-        
-        <!--
-        {# Avec 2 params #}
-        {# <router-link
-          :to="{ name: 'Details', params: { id: item.id, itemName: item.name }}"
-          class="btn btn-primary btn-sm"
-        > #}-->
-      
+    
       </li>
       </ul>
     </div>

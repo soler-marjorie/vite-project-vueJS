@@ -18,10 +18,6 @@ import { computed, watch, onMounted, onUpdated, onBeforeUnmount } from 'vue'
 
 const props = defineProps(['id']);
 
-// Avec deux params
-// const props = defineProps(['id','itemName']);
-
-
 
 
 const emit = defineEmits({

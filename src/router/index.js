@@ -126,58 +126,53 @@ const router = createRouter({
             component: () => import("../views/exo/ExoPropsView.vue")
         },
         {
-            path: "/exercices/exo9.1",
-            name: "exo9.1",
-            component: () => import("../views/exo/ExoPropsParent.vue")
-        },
-        {
-            path: "/exercices/exo9.2",
-            name: "exo9.2",
-            component: () => import("../views/exo/ExoPropsEnfant.vue")
-        },
-        {
             path: "/exercices/exo10",
             name: "exo10",
-            component: () => import("../views/exo/ExoPropsBug.vue")
+            component: () => import("../views/exo/ExoPropsParent.vue")
         },
         {
             path: "/exercices/exo11",
             name: "exo11",
-            component: () => import("../views/exo/V-forV-bind.vue")
+            component: () => import("../views/exo/ExoPropsEnfant.vue")
         },
         {
             path: "/exercices/exo12",
             name: "exo12",
-            component: () => import("../views/exo/V-forV-bindEnfant.vue")
+            component: () => import("../views/exo/ExoPropsBug.vue")
         },
         {
             path: "/exercices/exo13",
             name: "exo13",
+            component: () => import("../views/exo/V-forV-bind.vue")
+        },
+        {
+            path: "/exercices/exo14",
+            name: "exo14",
+            component: () => import("../views/exo/V-forV-bindEnfant.vue")
+        },
+        {
+            path: "/exercices/exo15",
+            name: "exo15",
             component: () => import("../views/exo/ExoFetchApi.vue")
         },
 
+
+        
+
+
+
         {
             path: "/lesson-router",
-            name: "exo14",
+            name: "lesson-router",
             component: () => import("../views/exo/routes/LessonRouterView.vue")
         },
-
-
-        //router nav exemple
         {
             path: "/details/:id",
-            name: "exo14.1",
+            name: "details",
             component: () => import("../views/exo/routes/DetailsPage.vue"),
             props:true
         },
-        //avec 2 params
-        // {
-        //     path: "/details/:id/:itemName", //Exemple de route avec 2 paramètres  
-        //     name: "Details",
-        //     component: () => import("../views/../components/shared/DetailsPage.vue"),
-        //     props:true
-        // },
-
+       
 
         {
             path: "/",
