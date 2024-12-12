@@ -1,8 +1,28 @@
 import { createRouter, createWebHistory } from "vue-router";
+import {auth} from '../firebase'
 
 const router = createRouter({
     history: createWebHistory(),
     routes: [
+
+        {
+            path: "/register",
+            name: "Register",
+            component: () => import("../views/inscription/RegisterPageView.vue")
+        },
+        {
+            path: "/login",
+            name: "Login",
+            component: () => import("../views/inscription/LoginPageView.vue")
+        },
+        {
+            path: "/dashboard",
+            name: "Dashboard",
+            component: () => import("../views/inscription/DashboardView.vue"),
+            meta: { requiresAuth: true }, // Route protégée
+        },
+
+
 
         {
             path: "/",
@@ -68,6 +88,11 @@ const router = createRouter({
             path: "/lessons/lesson10",
             name: "Lesson10",
             component: () => import("../views/lessons/LessonListRendering.vue")
+        },
+        {
+            path: "/lessons/lesson11",
+            name: "Lesson11",
+            component: () => import("../views/lessons/LessonLibraryChartJsView.vue")
         },
 
 
@@ -157,10 +182,8 @@ const router = createRouter({
         },
 
 
-        
 
-
-
+    
         {
             path: "/lesson-router",
             name: "lesson-router",
@@ -172,7 +195,18 @@ const router = createRouter({
             component: () => import("../views/exo/routes/DetailsPage.vue"),
             props:true
         },
+
+        {
+            path: "/chartJS",
+            name: "chartJs",
+            component: () => import("../views/chartJs/ChartParent.vue")
+        },
        
+
+
+
+
+
 
         {
             path: "/",
@@ -215,6 +249,21 @@ const router = createRouter({
             component: () => import('../views/NotFoundView.vue')
         },
     ]
+});
+
+// Vérification avant chaque navigation
+router.beforeEach((to, from, next) => {
+    const currentUser = auth.currentUser;
+
+    if (to.matched.some((record) => record.meta.requiresAuth)) {
+        if (!currentUser) {
+            next({ name: "Login" }); // Redirection vers la page de connexion si non authentifié
+        } else {
+            next();
+        }
+    } else {
+        next();
+    }
 });
 
 export default router;

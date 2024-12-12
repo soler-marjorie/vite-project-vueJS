@@ -22,10 +22,13 @@
                     { name: "Exercice 14 : V-for V-bind Enfant", path: "/exercices/exo14" },
                     { name: "Exercice 15 : Fetch API", path: "/exercices/exo15" },
 
+                    { name: "Exercice 16 : s'inscrire'", path: "/exercices/exo16" },
+
                     { name: "Exercice Router: Routes détails", path: "/lesson-router" },
                     { name: "Exercice Router details : Routes détails id", path: "/details/:id" },
 
-                    
+
+                    { name: "Exercice Chart: Chart.js", path: "/chartJS" },
 
 
                     
@@ -42,6 +45,7 @@
                     { name: "Lesson 8 : Dynamic style", path: "/Lessons/lesson8" },
                     { name: "Lesson 9 : Methods", path: "/Lessons/lesson9" },
                     { name: "Lesson 10 : List rendering", path: "/Lessons/lesson10" },
+                    { name: "Lesson 11 : ChartJS", path: "/Lessons/lesson11" },
                 ],
 
                 TP: [
@@ -130,6 +134,9 @@
                     </li>
                 </ul>
             </div>
+
+            <router-link class="nav-link active" aria-current="page" to="/register">register</router-link>
+            <router-link class="nav-link active" aria-current="page" to="/login">login</router-link>
         </div>
     </nav>
 </template>
