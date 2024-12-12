@@ -1,4 +1,5 @@
 <template>
+  <h1>Doughnut ChartJS</h1>
   <div class="container">
     <Doughnut :data="chartData" :options="chartOptions" />
   </div>
